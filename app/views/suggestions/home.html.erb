@@ -1,30 +1,70 @@
-<h1>Quiz Home</h1>
+<body>
+  <div class = "topbar">
+<button class="topbutton" type="button">HOME</button>
+<button class="topbutton" type="button">SHOP</button>
+<button class="topbutton" type="button">ABOUT GYFT</button>
+  </div>
+  <div class="photohere">
+    <img class= "mainpicture" src="assets/placeholder1.jpg">
+    <div class="title">
+      <hr>
+      <h1>GYFT.</h1>
+      <hr>
+      <h5 class="caption">This is where the caption goes.</h5>
+    </div>
+  </div>
 
-<div class = "question-1">
-  <%= form_for :items, :url => suggestions_path, :html => {:id => "home_form"}, method: :get do |form| %>
-  <h1>Age?</h1>
-  <% [["baby",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["home improvement", 'Adult'], ["crafts", 'Senior']].each do |item| %>
-  <%= form.radio_button :age, item[0]%>
-  <%= form.label :age, item[1]%>
-  <% end %>
+
+
+
+
+
+<h1 class="quizheader">Lets help you put together the perfect Gyft!</h1>
+<div class="quizwrapper">
+    <%= form_for :items, :url => suggestions_path, :html => {:id => "home_form"}, method: :get do |form| %>
+    <h1 class="question">Age?</h1>
+
+    <div class="multiplechoice">
+      <ul>
+        <% [["baby",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["home improvement", 'Adult'], ["crafts", 'Senior']].each do |item| %>
+          <li>
+            <%= form.radio_button :age, item[0] %>
+            <%= form.label :age, item[1], class: 'f-option' %>
+            <div class="check"><div class="inside"></div></div>
+          </li>
+          <% end %>
+        </ul>
+    </div>
+
+<div>
+  <h1 class = "question">Describe their ideal afternoon...</h1>
+  <div class="multiplechoice">
+    <ul>
+      <% [["garden",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["ipad", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.']].each do |item| %>
+        <li>
+          <%= form.radio_button :activities, item[0]%>
+          <%= form.label :activities, item[1]%>
+          <div class="check"><div class="inside"></div></div>
+        </li>
+      <%end %>
+    </ul>
+  </div>
 </div>
 
-<div class = "question-2">
-  <h1>Describe their ideal afternoon...</h1>
-  <% [["garden",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["ipad", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.']].each do |item| %>
-  <%= form.radio_button :activities, item[0]%>
-  <%= form.label :activities, item[1]%>
-  <%end %>
-</div>
-
-<div class = "question-3">
-  <h1>Their style is best described as...</h1>
+<div>
+  <h1 class = "question">Their style is best described as...</h1>
+  <div class="multiplechoice">
+    <ul>
   <% [["pens",'Minimalist and Modern'], ["scandinavian", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale']].each do |item| %>
+    <li>
   <%= form.radio_button :style, item[0]%>
   <%= form.label :style, item[1]%>
+  <div class="check"><div class="inside"></div></div>
+</li>
   <%end %>
+</ul>
 </div>
-
+</div>
 <div class = "submit">
   <%= form.submit "Generate My Gift", :id => 'submit_form' %>
 </div>

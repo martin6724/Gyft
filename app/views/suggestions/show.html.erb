@@ -7,7 +7,7 @@
 
     <p><%=image_tag(x['largeImage']) %></p> <br>
     <p class= "show_description"><%= x["shortDescription"] %></p><br>
-    <span class="item_price"><%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Buy", x["productURL"], :target => "_blank" %></span><br>
+    <span class="item_price"><%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Buy", x["productUrl"], :target => "_blank" %></span><br>
   </div>
   <%end %>
 </div>
