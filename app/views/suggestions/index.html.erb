@@ -1,11 +1,14 @@
-<h1>Suggestions#index</h1>
-<p>Find me in app/views/suggestions/index.html.erb</p>
-<% @items.each_with_index do |x, i|%>
-<h1><%=x["name"]%></h1>
+<h1>Gift Suggestions</h1>
+
+<div class = "results_wrapper">
+
+  <% @items.each do |x|%>
+  <div class = "items">
+    <p class= "item_name"><%= x["name"] %> <br></p>
+    <p class= "item_image">  <%= link_to image_tag(x['mediumImage']), suggestion_path(x['itemId'])%></p>
+
+    </div>
+    <%end %>
 
 
-<%= link_to image_tag(x['mediumImage']), suggestion_path(x['itemId'])%>
-
-<%= i %>
-<%end %>
-<%= @items%>
+  </div>

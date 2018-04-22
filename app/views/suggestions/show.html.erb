@@ -1,12 +1,13 @@
-<h1>Suggestions#show</h1>
-<p>Find me in app/views/suggestions/show.html.erb</p>
+<h1>Want to buy? Here are the details.</h1>
 
+<div class="outside_api">
+  <% @items.each do |x|%>
+  <div class= "items">
+    <p class= "show_name"><%= x["name"] %> <br></p>
 
-<div class="outside">
-  <div class="inside"></div>
-
-</div>
-<div class="box">
-  <div class="inside"></div>
-
+    <p><%=image_tag(x['largeImage']) %></p> <br>
+    <p class= "show_description"><%= x["shortDescription"] %></p><br>
+    <span class="item_price"><%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Buy", x["productURL"], :target => "_blank" %></span><br>
+  </div>
+  <%end %>
 </div>

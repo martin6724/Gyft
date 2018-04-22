@@ -1,0 +1,57 @@
+h1 {
+  font-family: Andale Mono;
+  color: #808080;
+  font-weight: bold;
+  font-size: 55px;
+  text-align:center;
+  padding-bottom: 50px;
+}
+
+.results_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: 100%;
+}
+
+.items {
+  word-wrap: break-word;
+  text-align:center;
+  margin-bottom: 1em;
+}
+
+.item_name {
+  font-family: Andale Mono;
+  color: #808080;
+  font-weight: bold;
+}
+
+.item_image {
+  opacity: 1;
+  transition: .3s ease-in-out;
+  padding-top: 7px;
+}
+.item_image :hover {
+  opacity: .8;
+
+}
+.item_price,
+  .item_buy,
+  .show_name {
+    font-family: Andale;
+    color: #524b4b;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+
+
+.show_description {
+      font-family: Andale mono;
+      color: #808080;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    span {padding-bottom: 40px;}
