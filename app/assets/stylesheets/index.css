@@ -1,4 +1,4 @@
-h1 {
+.gift-suggestions {
   font-family: Andale Mono;
   color: #808080;
   font-weight: bold;
@@ -53,5 +53,3 @@ h1 {
       font-size: 16px;
       margin: 20px;
     }
-
-    span {padding-bottom: 40px;}

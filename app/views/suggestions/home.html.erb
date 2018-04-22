@@ -1,2 +1,32 @@
-<h1>GyftID</h1>
-<p><em>Thoughtful gifts for thoughtless people.</em></p>
+<h1>Quiz Home</h1>
+
+<div class = "question-1">
+  <%= form_for :items, :url => suggestions_path, :html => {:id => "home_form"}, method: :get do |form| %>
+  <h1>Age?</h1>
+  <% [["baby",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["home improvement", 'Adult'], ["crafts", 'Senior']].each do |item| %>
+  <%= form.radio_button :age, item[0]%>
+  <%= form.label :age, item[1]%>
+  <% end %>
+</div>
+
+<div class = "question-2">
+  <h1>Describe their ideal afternoon...</h1>
+  <% [["garden",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["ipad", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.']].each do |item| %>
+  <%= form.radio_button :activities, item[0]%>
+  <%= form.label :activities, item[1]%>
+  <%end %>
+</div>
+
+<div class = "question-3">
+  <h1>Their style is best described as...</h1>
+  <% [["pens",'Minimalist and Modern'], ["scandinavian", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale']].each do |item| %>
+  <%= form.radio_button :style, item[0]%>
+  <%= form.label :style, item[1]%>
+  <%end %>
+</div>
+
+<div class = "submit">
+  <%= form.submit "Generate My Gift", :id => 'submit_form' %>
+</div>
+
+<% end %>
