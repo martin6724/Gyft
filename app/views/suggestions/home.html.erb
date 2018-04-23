@@ -16,7 +16,10 @@
 
 
 
-
+  <% categories = ['movies star wars', 'movies marvel avengers', 'music vinyl', 'music karaoke', 'books food wine', 'books crafts hobbies', 'home glam accessories', 'home boho accessories',
+                    'nintendo 3ds game', 'xbox one games', 'nintendo switch games',
+                  'playstation vr', 'pets fish', 'pets reptiles','recreation golf',
+                  'specialty gift card', 'mugs', 'throw pillows', 'posters'] %>
 
 
 <h1 class="quizheader">Lets help you put together the perfect Gyft!</h1>
@@ -26,7 +29,7 @@
 
     <div class="multiplechoice">
       <ul>
-        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior']].each do |item| %>
+        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior'],[categories.shuffle.first, "I don't know! Suprise me!"]].each do |item| %>
           <li>
             <%= form.radio_button :age, item[0] %>
             <%= form.label :age, item[1], class: 'f-option' %>
