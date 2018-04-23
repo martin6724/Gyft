@@ -1,75 +1,73 @@
-<body>
-  <div class = "topbar">
-<button class="topbutton" type="button">HOME</button>
-<button class="topbutton" type="button">SHOP</button>
-<button class="topbutton" type="button">ABOUT GYFT</button>
+<div class = "topbar">
+  <button class="topbutton" type="button">HOME</button>
+  <button class="topbutton" type="button">SHOP</button>
+  <button class="topbutton" type="button">ABOUT GYFT</button>
+</div>
+<div class="photohere">
+  <img class= "mainpicture" src="assets/giphy.gif">
+  <div class="title">
+    <hr>
+    <h1>GYFT.</h1>
+    <hr>
+    <h5 class="caption">Shopping for strangers.</h5>
   </div>
-  <div class="photohere">
-    <img class= "mainpicture" src="assets/giphy.gif">
-    <div class="title">
-      <hr>
-      <h1>GYFT.</h1>
-      <hr>
-      <h5 class="caption">Shopping for strangers.</h5>
-    </div>
-  </div>
+</div>
 
-
-
-  <% categories = ['movies star wars', 'movies marvel avengers', 'music vinyl', 'music karaoke', 'books food wine', 'books crafts hobbies', 'home glam accessories', 'home boho accessories',
-                    'nintendo 3ds game', 'xbox one games', 'nintendo switch games',
-                  'playstation vr', 'pets fish', 'pets reptiles','recreation golf',
-                  'specialty gift card', 'mugs', 'throw pillows', 'posters'] %>
+<% categories = ['movies star wars', 'movies marvel avengers', 'music vinyl', 'music karaoke', 'books food wine', 'books crafts hobbies', 'home glam accessories', 'home boho accessories',
+  'nintendo 3ds game', 'xbox one games', 'nintendo switch games',
+  'playstation vr', 'pets fish', 'pets reptiles','recreation golf',
+  'specialty gift card', 'mugs', 'throw pillows', 'posters'] %>
 
 
 <h1 class="quizheader">Lets help you put together the perfect Gyft!</h1>
 <div class="quizwrapper">
-    <%= form_for :items, :url => suggestions_path, :html => {:id => "home_form"}, method: :get do |form| %>
-    <h1 class="question">Age?</h1>
+  <%= form_for :items, :url => suggestions_path, :html => {id: "home_form"}, method: :get  do |form| %>
+  <h1 class="question">Age?</h1>
 
-    <div class="multiplechoice">
-      <ul>
-        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior'],[categories.shuffle.first, "I don't know! Surprise me!"]].each do |item| %>
-          <li>
-            <%= form.radio_button :age, item[0] %>
-            <%= form.label :age, item[1], class: 'f-option' %>
-            <div class="check"><div class="inside"></div></div>
-          </li>
-          <% end %>
-        </ul>
-    </div>
-
-<div>
-  <h1 class = "question">Describe their ideal afternoon...</h1>
   <div class="multiplechoice">
     <ul>
-      <% [["artificial plants",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["tablet", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.'], ["", "I don't know!"]].each do |item| %>
-        <li>
-          <%= form.radio_button :activities, item[0]%>
-          <%= form.label :activities, item[1]%>
-          <div class="check"><div class="inside"></div></div>
-        </li>
-      <%end %>
+      <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior'],[categories.shuffle.first, "I don't know! Surprise me!"]].each do |item| %>
+      <li>
+        <%= form.radio_button :age, item[0], id: item[0].parameterize, class: 'age' %>
+        <%= form.label :age, item[1], class: 'f-option', for: item[0].parameterize %>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <% end %>
     </ul>
   </div>
-</div>
 
-<div>
-  <h1 class = "question">Their style is best described as...</h1>
-  <div class="multiplechoice">
-    <ul>
-  <% [["midcentury",'Minimalist and Modern'], ["wall art", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale'],["", "I don't know!"]].each do |item| %>
-    <li>
-  <%= form.radio_button :style, item[0]%>
-  <%= form.label :style, item[1]%>
-  <div class="check"><div class="inside"></div></div>
-</li>
-  <%end %>
-</ul>
-</div>
-</div>
-<div class = "submit">
-  <%= form.submit "Generate My GYFT", :id => 'submit_form' %>
-</div>
+  <div>
+    <h1 class = "question">Describe their ideal afternoon...</h1>
+    <div class="multiplechoice">
+      <ul>
+        <% [["artificial plants",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["tablet", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.'], ["", "I don't know!"]].each do |item| %>
+        <li>
+          <%= form.radio_button :activities, item[0], id: item[0].parameterize%>
+          <%= form.label :activities, item[1], for: nil, for: item[0].parameterize%>
+          <div class="check"><div class="inside"></div></div>
+        </li>
+        <%end %>
+      </ul>
+    </div>
+  </div>
 
-<% end %>
+  <div>
+    <h1 class = "question">Their style is best described as...</h1>
+    <div class="multiplechoice">
+      <ul>
+        <% [["midcentury",'Minimalist and Modern'], ["wall art", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale'],["", "I don't know!"]].each do |item| %>
+        <li>
+          <%= form.radio_button :style, item[0], id: (item[0].blank? ? item[1] : item[0]).parameterize%>
+          <%= form.label :style, item[1], for: (item[0].blank? ? 'blank' : item[0].parameterize )%>
+          <div class="check"><div class="inside"></div></div>
+        </li>
+        <%end %>
+      </ul>
+    </div>
+  </div>
+  <div class = "submit">
+    <%= form.submit "Generate My GYFT", :id => 'submit_form', data: { disable_with: false} %>
+  </div>
+
+  <% end %>
+</div>
