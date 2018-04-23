@@ -27,11 +27,11 @@ s  width: 100%;
   /* margin-bottom: 1em; */
 }
 
-.item_name {
+/* .item_name {
   font-family: Andale Mono;
   color: #808080;
   font-weight: bold;
-}
+} */
 
 .item_image {
   opacity: 1;
@@ -45,6 +45,7 @@ s  width: 100%;
 }
 .item_image :hover {
   opacity: .8;
+
 
 }
 .item_price,
@@ -127,4 +128,19 @@ s  width: 100%;
 
 }
 
-.item_buy:hover {opacity: 1}
+.item_buy:hover {
+  opacity: 5}
+
+.item_name{
+  position: relative;
+  top: 25em;
+  word-wrap:break-word;
+  font-size: 13px;
+  z-index: 46;
+  display: none;
+}
+
+/* .item_name:hover{
+  display:inline;
+  z-index: 1000;
+} */

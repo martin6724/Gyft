@@ -22,8 +22,9 @@
 
   <% @items.each do |x|%>
   <div class = "items">
-    <!-- <p class= "item_name"><%= x["name"] %> <br></p> -->
-    <p class= "item_image">  <%= link_to image_tag(x['largeImage']), suggestion_path(x['itemId'])%></p>
+    <span class="item_name"><%= x["name"] %> </span>
+    <!-- <span class='test'>test</span> -->
+    <p class= "item_image"> <%= link_to image_tag(x['largeImage']), suggestion_path(x['itemId'])%></p>
     </div>
     <%end %>
   </div>
