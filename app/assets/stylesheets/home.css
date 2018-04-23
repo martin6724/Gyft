@@ -74,7 +74,7 @@ hr {
 }
 
 .mainpicture {
-  height: 750px;
+  height: 780px;
   width: 100%;
 
 }
@@ -108,7 +108,7 @@ hr {
 /**********************************************/
 
 #submit_form {
-  background-color:  #990000;
+  background-color: #d0807c;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -131,6 +131,7 @@ hr {
 
 .submit{
   text-align: center;
+
 }
 
 

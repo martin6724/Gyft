@@ -5,12 +5,12 @@
 <button class="topbutton" type="button">ABOUT GYFT</button>
   </div>
   <div class="photohere">
-    <img class= "mainpicture" src="assets/placeholder1.jpg">
+    <img class= "mainpicture" src="assets/giphy.gif">
     <div class="title">
       <hr>
       <h1>GYFT.</h1>
       <hr>
-      <h5 class="caption">This is where the caption goes.</h5>
+      <h5 class="caption">Shopping for strangers.</h5>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
 
     <div class="multiplechoice">
       <ul>
-        <% [["baby",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["home improvement", 'Adult'], ["crafts", 'Senior']].each do |item| %>
+        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior']].each do |item| %>
           <li>
             <%= form.radio_button :age, item[0] %>
             <%= form.label :age, item[1], class: 'f-option' %>
@@ -40,7 +40,7 @@
   <h1 class = "question">Describe their ideal afternoon...</h1>
   <div class="multiplechoice">
     <ul>
-      <% [["garden",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["ipad", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.']].each do |item| %>
+      <% [["artificial plants",'A brisk stroll through the park.'], ["Books", 'Enjoying a cup of tea over a good book'], ["tablet", 'Fidgeting with the latest gadget'], ["fitness", 'Reps at the gym.'], ["", "I don't know!"]].each do |item| %>
         <li>
           <%= form.radio_button :activities, item[0]%>
           <%= form.label :activities, item[1]%>
@@ -55,7 +55,7 @@
   <h1 class = "question">Their style is best described as...</h1>
   <div class="multiplechoice">
     <ul>
-  <% [["pens",'Minimalist and Modern'], ["scandinavian", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale']].each do |item| %>
+  <% [["midcentury",'Minimalist and Modern'], ["wall art", 'Classic and Sophisticated'],["pinatas",  'Delightfully Quirky'], ["planters", 'Au Naturale'],["", "I don't know!"]].each do |item| %>
     <li>
   <%= form.radio_button :style, item[0]%>
   <%= form.label :style, item[1]%>
@@ -66,7 +66,7 @@
 </div>
 </div>
 <div class = "submit">
-  <%= form.submit "Generate My Gift", :id => 'submit_form' %>
+  <%= form.submit "Generate My GYFT", :id => 'submit_form' %>
 </div>
 
 <% end %>
