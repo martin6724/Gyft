@@ -29,7 +29,7 @@
 
     <div class="multiplechoice">
       <ul>
-        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior'],[categories.shuffle.first, "I don't know! Suprise me!"]].each do |item| %>
+        <% [["baby toys",'Toddler'], ["toys", 'Child'],["electronics",'Young Adult'], ["storage", 'Adult'], ["pioneer woman", 'Senior'],[categories.shuffle.first, "I don't know! Surprise me!"]].each do |item| %>
           <li>
             <%= form.radio_button :age, item[0] %>
             <%= form.label :age, item[1], class: 'f-option' %>
