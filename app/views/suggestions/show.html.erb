@@ -12,16 +12,17 @@
 
 
 
-
-<h1 class = "gift-suggestions">IS THIS THE ONE?</h1>
+<hr class="style1">
+<h2 class = "gyft-suggestions">Is this</h2> <h1 class = "gyft-suggestions">THE ONE?</h1>
+<hr class="style1">
 
 <div class="outside_api">
   <% @items.each do |x|%>
   <div class= "items">
-    <p class= "show_name"><%= x["name"] %> <br></p>
+  <center><p class= "show_name"><%= x["name"] %> <br></p></center>
 
     <p><%=image_tag(x['largeImage']) %></p> <br>
-    <span class="item_price"> <%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Purchase", x["productUrl"], :target => "_blank" %></span><br>
+    <span class="item_price"> <%=  x["salePrice"] %><br><span class= "item_buy"><%= link_to "Purchase", x["productUrl"], :target => "_blank" %></span><br>
   <center>  <p class= "show_description"> <%= x["shortDescription"] %></p><br></center>
     <!-- <span class="item_price"> <%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Purchase", x["productUrl"], :target => "_blank" %></span><br> -->
   </div>

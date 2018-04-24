@@ -3,8 +3,26 @@
   color: #808080;
   font-weight: bold;
   font-size: 55px;
-  text-align:center;
+  text-align: center;
   padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+h2.gyft-suggestions{
+  font-family: Snell Roundhand;
+  font-size: 50px;
+ text-align: center;
+ color:  #808080;
+
+}
+
+h1.gyft-suggestions{
+  font-family: Monaco;
+  text-transform: uppercase;
+  margin-top: -60px;
+  font-size: 50px;
+  text-align: center;
+  color:  #808080;
 }
 
  .results_wrapper {
@@ -18,7 +36,7 @@ s  width: 100%;
   /* grid-template-rows: 100%;
   column-count: 4; */
   /* column-gap: 0.5em; */
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 .items {
@@ -41,17 +59,16 @@ s  width: 100%;
  min-width: 150px; */
  margin: 0 0px 0px 0;
   /* padding-top: 7px; */
-
 }
-.item_image :hover {
-  opacity: .8;
 
-
+.item_image:hover {
+  opacity: 0.2;
 }
+
 .item_price,
   .item_buy,
   .show_name {
-    font-family: Andale;
+    font-family: Monaco;
     color: #524b4b;
     font-size: 20px;
     font-weight: bold;
@@ -61,13 +78,14 @@ s  width: 100%;
 
 
 .show_description {
-      font-family: Andale mono;
+      font-family: Monaco;
       color: #808080;
       font-size: 18px;
       margin: 20px;
       border: 1px;
       width: 400px;
       text-align: center;
+
     }
 
     .topbuttons {
@@ -100,15 +118,16 @@ s  width: 100%;
 
 
 .show_name{
-  font-family: Andale Mono;
+  font-family: Monaco;
   color:#808080;
+  text-align: center;
+  border: solid none none;
+  width: 400px;
 }
 
 .wholebody{
-    background-image: url("tallbow.png");
+    background-image: url("bowvertical.png");
     background-repeat: no-repeat;
-
-
 }
 
 .item_buy {
@@ -124,23 +143,54 @@ s  width: 100%;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  text-decoration: none;
-
 }
 
 .item_buy:hover {
-  opacity: 5}
+  opacity: 5;
+}
 
 .item_name{
   position: relative;
   top: 25em;
   word-wrap:break-word;
-  font-size: 13px;
+  font-size: 20px;
   z-index: 46;
   display: none;
+  border: solid none none;
+  font-family: sans-serif;
+  color: #595959;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   /* background-color: #d9d9d9; */
+   font-weight: 900;
+   border-radius: 3px;
+ }
+
+
+.items {
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
-/* .item_name:hover{
+.item_name:hover{
   display:inline;
   z-index: 1000;
-} */
+}
+
+.item_price {
+  font-family: Monaco;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 600px;
+}

@@ -85,12 +85,11 @@ hr {
 /***************************************/
 
 .quizheader{
-  font-size: 30px;
+  /* font-size: 30px; */
   text-align: center;
-  font-family: Monaco;
+  /* font-family: Monaco; */
   color: #cccccc;
   margin-top: 50px;
-  text-transform: uppercase;
 }
 
 .question{
@@ -99,6 +98,18 @@ hr {
   font-family: Andale Mono;
   color: #808080;
   margin-top: 50px;
+}
+
+h2.quizheader{
+  font-family: Snell Roundhand;
+  font-size: 50px;
+}
+
+h1.quizheader{
+  font-family: Monaco;
+  text-transform: uppercase;
+  margin-top: -40px;
+  font-size: 50px;
 }
 
 
