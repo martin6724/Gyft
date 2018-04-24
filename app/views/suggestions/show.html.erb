@@ -1,0 +1,30 @@
+<div class="wholebody">
+
+<div class = "topbars">
+<button class="topbuttons" type="button">HOME</button>
+<button class="topbuttons" type="button">SHOP</button>
+<button class="topbuttons" type="button">ABOUT GYFT</button>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+
+<h1 class = "gift-suggestions">IS THIS THE ONE?</h1>
+
+<div class="outside_api">
+  <% @items.each do |x|%>
+  <div class= "items">
+    <p class= "show_name"><%= x["name"] %> <br></p>
+
+    <p><%=image_tag(x['largeImage']) %></p> <br>
+    <span class="item_price"> <%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Purchase", x["productUrl"], :target => "_blank" %></span><br>
+  <center>  <p class= "show_description"> <%= x["shortDescription"] %></p><br></center>
+    <!-- <span class="item_price"> <%=  x["salePrice"] %><span class= "item_buy"><%= link_to "Purchase", x["productUrl"], :target => "_blank" %></span><br> -->
+  </div>
+  <%end %>
+</div>
+</div>

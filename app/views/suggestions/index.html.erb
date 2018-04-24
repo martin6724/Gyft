@@ -1,0 +1,30 @@
+
+<div class = "topbars">
+<button class="topbuttons" type="button">HOME</button>
+<button class="topbuttons" type="button">SHOP</button>
+<button class="topbuttons" type="button">ABOUT GYFT</button>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<h1 class = "gift-suggestions">GYFT SUGGESTIONS.</h1>
+<img class= "ribbonpicture" src="assets/EvenSmallerBow3.png">
+<br><br><br>
+
+
+<div class = "results_wrapper">
+
+  <% @items.each do |x|%>
+  <div class = "items">
+    <span class="item_name"><%= x["name"] %> </span>
+    <!-- <span class='test'>test</span> -->
+    <p class= "item_image"> <%= link_to image_tag(x['largeImage']), suggestion_path(x['itemId'])%></p>
+    </div>
+    <%end %>
+  </div>

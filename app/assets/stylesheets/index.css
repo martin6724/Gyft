@@ -1,0 +1,146 @@
+.gift-suggestions {
+  font-family: Andale Mono;
+  color: #808080;
+  font-weight: bold;
+  font-size: 55px;
+  text-align:center;
+  padding-bottom: 10px;
+}
+
+ .results_wrapper {
+  /* display: grid; */
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-flow: row wrap;
+s  width: 100%;
+  /* grid-gap: 20px; */
+  /* grid-template-rows: 100%;
+  column-count: 4; */
+  /* column-gap: 0.5em; */
+  margin-left: 60px;
+}
+
+.items {
+  word-wrap: break-word;
+  text-align:center;
+  /* margin-bottom: 1em; */
+}
+
+/* .item_name {
+  font-family: Andale Mono;
+  color: #808080;
+  font-weight: bold;
+} */
+
+.item_image {
+  opacity: 1;
+  transition: .3s ease-in-out;
+  flex: auto;
+ /* height: 250px;
+ min-width: 150px; */
+ margin: 0 0px 0px 0;
+  /* padding-top: 7px; */
+
+}
+.item_image :hover {
+  opacity: .8;
+
+
+}
+.item_price,
+  .item_buy,
+  .show_name {
+    font-family: Andale;
+    color: #524b4b;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+
+
+.show_description {
+      font-family: Andale mono;
+      color: #808080;
+      font-size: 18px;
+      margin: 20px;
+      border: 1px;
+      width: 400px;
+      text-align: center;
+    }
+
+    .topbuttons {
+      background-color: #cccccc;
+      color: white;
+      border: 2px solid #cccccc;
+      border-radius: 5px;
+      padding: 15px;
+      font-size: 18px;
+      font-family: Monaco;
+    }
+
+    .topbars {
+      text-align: left;
+      background-color:  #cccccc;
+      border: solid #cccccc 6px;
+      margin-top: -7px;
+    }
+
+    .topbuttons:hover{
+      color: gray;
+    }
+
+
+.ribbonpicture {
+  width: 100%;
+  length: 10%;
+  margin-top: -130px;
+}
+
+
+.show_name{
+  font-family: Andale Mono;
+  color:#808080;
+}
+
+.wholebody{
+    background-image: url("tallbow.png");
+    background-repeat: no-repeat;
+
+
+}
+
+.item_buy {
+  background-color: #d0807c;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.item_buy:hover {
+  opacity: 5}
+
+.item_name{
+  position: relative;
+  top: 25em;
+  word-wrap:break-word;
+  font-size: 13px;
+  z-index: 46;
+  display: none;
+}
+
+/* .item_name:hover{
+  display:inline;
+  z-index: 1000;
+} */
