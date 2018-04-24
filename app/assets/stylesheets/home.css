@@ -160,6 +160,49 @@ h1.quizheader{
   font-family: Andale Mono;
 }
 
+
+.questionbox {
+  display: none;
+}
+
+.questionbox.active {
+  display: block;
+}
+
+.left-arrow, .right-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  margin-left: -110px;
+  margin-right: -150px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: lightgray;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  color: white;
+  background-color: #339966;
+  opacity: 0.7;
+  border-color: #d0807c;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.left-arrow {
+  left: 0;
+}
+
 /* .multiplechoice {
   list-style: none;
   margin: 0;
