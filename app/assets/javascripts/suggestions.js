@@ -1,6 +1,6 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-<<<<<<< HEAD
+
 $(document).on('turbolinks:load', function() {
 
 
@@ -43,5 +43,3 @@ $(document).on('turbolinks:load', function() {
 
 
 })
-=======
->>>>>>> 1eb9a468a8f18eecb4eb74145bd1a5a20e69275d
