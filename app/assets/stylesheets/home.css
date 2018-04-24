@@ -149,6 +149,7 @@ hr {
   font-family: Andale Mono;
 }
 
+<<<<<<< HEAD
 .questionbox {
   display: none;
 }
@@ -191,6 +192,8 @@ hr {
   left: 0;
 }
 
+=======
+>>>>>>> 1eb9a468a8f18eecb4eb74145bd1a5a20e69275d
 /* .multiplechoice {
   list-style: none;
   margin: 0;
