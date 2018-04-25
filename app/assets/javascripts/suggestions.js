@@ -3,8 +3,9 @@
 
 $(document).on('turbolinks:load', function() {
 
+  $('.left-arrow').hide()
 
-  $('.right-arrow').click(function(e){
+  $('.right-arrow').click(function(e) {
     e.preventDefault()
     var currentQuestionbox = $('.questionbox.active');
     var nextQuestionbox = currentQuestionbox.next();
@@ -12,15 +13,23 @@ $(document).on('turbolinks:load', function() {
     currentQuestionbox.fadeOut(300).removeClass('active');
     nextQuestionbox.fadeIn(300).addClass('active');
 
-
     if (nextQuestionbox.length == 0) {
       $('.questionbox').first().fadeIn(300).addClass('active');
     }
 
+    setTimeout(function() {
+      if($('.first:visible').length === 1){
+        $('.left-arrow').hide()
+      }
+      else {
+        $('.left-arrow').show()
+      }
+    },301)
+
     if( $('.questionbox.last')[0].className=="questionbox last active") {
-      console.log("I'm done");
       $('.right-arrow').hide()
     }
+
   });
 
 
@@ -35,11 +44,10 @@ $(document).on('turbolinks:load', function() {
     if(prevQuestionbox.length == 0) {
       $('.questionbox').last().fadeIn(300).addClass('active');
     }
-      $('.right-arrow').show()
+
+    $('.right-arrow').show()
 
   });
-
-
 
 
 })
